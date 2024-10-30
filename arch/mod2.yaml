@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: Create a S3 bucket
+
+# The random suffix generation from stack-id https://stackoverflow.com/a/68717631. Will give something like '51af3dc0'
+
+Resources:
+  RainS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName:
+        !Sub
+        - 'rain-bucket-${RandomGUID}'
+        - { RandomGUID: !Select [0, !Split ["-", !Select [2, !Split ["/", !Ref AWS::StackId ]]]] }

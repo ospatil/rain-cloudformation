@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: Create a SQS queue
+
+Resources:
+  RainQueue:
+    Type: 'AWS::SQS::Queue'
+    Properties:
+      QueueName: 'RainQueue'
+      VisibilityTimeout: 60
+      MessageRetentionPeriod: 345600
+      DelaySeconds: 0
+      MaximumMessageSize: 262144
+      ReceiveMessageWaitTimeSeconds: 0

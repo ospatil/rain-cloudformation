@@ -1,0 +1,21 @@
+{
+  "name": "hono-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "esbuild": "esbuild src/index.ts --bundle --platform=node --target=esnext --format=esm --outfile=dist/index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@middy/core": "^5.5.1",
+    "date-fns": "^4.1.0"
+  }
+}

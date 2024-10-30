@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template using mod1 and mod2 as modules
+
+Resources:
+  Mod1:
+    Type: !Rain::Module "./mod1.yaml"
+
+  Mod2:
+    Type: !Rain::Module "./mod2.yaml"
+
