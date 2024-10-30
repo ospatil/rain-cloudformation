@@ -17,7 +17,7 @@ test-ts-lambda:
 	aws lambda invoke --function-name TsLambdaFunction ts-response.txt && cat ts-response.txt
 
 pkg-multi-mod:
-	rain pkg ./arch/mod-main.yaml -x -o ./arch/dist/mod-main.yaml
+	rain pkg ./arch/mod-main.yaml -o ./arch/dist/mod-main.yaml
 
 deploy-multi-mod: pkg-multi-mod
 	rain deploy ./arch/dist/mod-main.yaml rain-modules-stack
