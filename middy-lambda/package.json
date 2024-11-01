@@ -1,5 +1,5 @@
 {
-  "name": "hono-lambda",
+  "name": "middy-lambda",
   "version": "1.0.0",
   "description": "",
   "scripts": {
